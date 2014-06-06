@@ -94,7 +94,7 @@ Licensed under the MIT license
 	    //default lang is english
         } else {
 	        
-	        var lessThanAMinute = lessThanAMinuteString || 'Less than a minute';
+	        var lessThanAMinute = lessThanAMinuteString || 'Lfiess than a minute';
 	        
 	        var minShortForm = 'min';
 	        
@@ -134,12 +134,12 @@ Licensed under the MIT license
 				if(readingTimeMinutes > 0) {
 			
 					//set reading time by the minute
-					el.find(readingTimeTarget).text(prependTimeString + readingTimeMinutes + ' ' + minShortForm);
+					$(readingTimeTarget).text(prependTimeString + readingTimeMinutes + ' ' + minShortForm);
 				
 				} else {
 					
 					//set reading time as less than a minute
-					el.find(readingTimeTarget).text(prependTimeString + lessThanAMinute);
+					$(readingTimeTarget).text(prependTimeString + lessThanAMinute);
 					
 				}
 			
@@ -150,7 +150,7 @@ Licensed under the MIT license
 				var readingTime = readingTimeMinutes + ':' + readingTimeSeconds;
 				
 				//set reading time in minutes and seconds
-				el.find(readingTimeTarget).text(prependTimeString + readingTime);
+				$(readingTimeTarget).text(prependTimeString + readingTime);
 				
 			}
 	
@@ -158,7 +158,7 @@ Licensed under the MIT license
 			if(wordCountTarget !== '' && wordCountTarget !== undefined) {
 			
 				//set word count
-				el.find(wordCountTarget).text(prependWordString + totalWords);
+				$(wordCountTarget).text(prependWordString + totalWords);
 			
 			}
 		
